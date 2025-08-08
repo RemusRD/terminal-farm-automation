@@ -1,0 +1,6 @@
+cultivo,precio_min,precio_max,demanda,fecha
+tomate,12.00,18.00,alta,2024-01-01
+maiz,20.00,30.00,media,2024-01-01
+zanahoria,8.00,15.00,baja,2024-01-01
+papa,15.00,22.00,alta,2024-01-01
+trigo,8.00,12.00,media,2024-01-01

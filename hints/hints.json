@@ -1,0 +1,152 @@
+{
+  "issue_1": {
+    "titulo": "Arregla los print statements",
+    "hint_1": {
+      "text": "🤔 En Python 3, print es una función. ¿Qué necesitan las funciones para ser llamadas?",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Las funciones necesitan paréntesis. También, los strings necesitan comillas. Ejemplo: print('Hola')",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Estructura correcta:\nprint('Texto aquí')\nprint('Tu granja tiene', variable, 'cultivos')\nprint(f'Día: {dia}')",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_2": {
+    "titulo": "Define tipos de datos correctos",
+    "hint_1": {
+      "text": "🤔 ¿Cuál es la diferencia entre '3' y 3? ¿Entre 'True' y True?",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Con comillas es string ('3'), sin comillas es número (3). Los booleanos son True/False sin comillas.",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Tipos correctos:\ntiempo_crecimiento = 3  # int\nprecio = 15.50  # float\nnecesita_agua = True  # bool",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_3": {
+    "titulo": "Conversión de tipos",
+    "hint_1": {
+      "text": "🤔 No puedes multiplicar strings. ¿Cómo conviertes '10' a número?",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Usa int() para enteros, float() para decimales. Ejemplo: int('5') devuelve 5",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Para calcular:\nprecio_num = float(precio_texto)\ncantidad_num = int(cantidad_texto)\ntotal = precio_num * cantidad_num",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_4": {
+    "titulo": "Variables de la granja",
+    "hint_1": {
+      "text": "🤔 ¿Qué información necesita trackear una granja? Piensa en un juego de farming.",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Una granja necesita: tamaño, agua, energía, día actual. Se definen en __init__ con self.",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 En __init__ añade:\nself.tamaño = 10\nself.nivel_agua = 100\nself.energia = 100\nself.dia = 1",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_5": {
+    "titulo": "Input del usuario",
+    "hint_1": {
+      "text": "🤔 ¿Cómo puede el programa recibir información del usuario?",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 La función input() muestra un mensaje y espera que el usuario escriba algo.",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Ejemplo:\nnombre = input('¿Cómo se llama tu granja? ')\nopcion = input('Elige una opción: ')",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_9": {
+    "titulo": "Sistema de riego con condicionales",
+    "hint_1": {
+      "text": "🤔 Antes de regar, ¿qué dos cosas necesitas verificar? Piensa en la vida real.",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Necesitas: 1) Tener agua disponible (nivel_agua > 0) Y 2) El cultivo necesita agua. Usa 'and' para verificar ambas.",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Estructura:\nif self.nivel_agua > 0:\n    for cultivo in self.cultivos:\n        if cultivo.necesita_agua:\n            cultivo.regar()\n            self.nivel_agua -= 1",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_10": {
+    "titulo": "Lista de cultivos",
+    "hint_1": {
+      "text": "🤔 ¿Cómo almacenas múltiples elementos del mismo tipo en Python?",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Las listas se crean con corchetes []. Puedes iniciar vacía [] o con elementos ['tomate', 'maíz']",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Cambia:\nself.cultivos = None\nPor:\nself.cultivos = []\n\nLuego usa append() para añadir.",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_11": {
+    "titulo": "Métodos de lista",
+    "hint_1": {
+      "text": "🤔 ¿Qué operaciones puedes hacer con una lista? Añadir, quitar, ordenar...",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Métodos útiles: append(item), remove(item), sort(), len(lista), item in lista",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Ejemplos:\nself.cultivos.append(nuevo_cultivo)\nself.cultivos.remove(cultivo)\nself.cultivos.sort(key=lambda x: x.precio)",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_16": {
+    "titulo": "Bucle de cosecha",
+    "hint_1": {
+      "text": "🤔 ¿Cómo revisas cada elemento de una lista uno por uno?",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Usa 'for cultivo in self.cultivos:' para iterar sobre cada cultivo.",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Estructura:\ncosechados = 0\nfor cultivo in self.granja.cultivos:\n    if cultivo.puede_cosechar():\n        # cosechar\n        cosechados += 1\nreturn cosechados",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_17": {
+    "titulo": "Game loop con while",
+    "hint_1": {
+      "text": "🤔 ¿Cómo haces que algo se repita hasta que el usuario decida parar?",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Un bucle while con una condición. Cambia la condición cuando el usuario elija salir.",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Estructura:\njugando = True\nwhile jugando:\n    mostrar_menu()\n    opcion = input('Elige: ')\n    if opcion == '0':\n        jugando = False",
+      "unlock_after_minutes": 20
+    }
+  }
+}

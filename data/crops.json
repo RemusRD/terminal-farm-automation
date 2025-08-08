@@ -1,0 +1,39 @@
+{
+  "cultivos": {
+    "tomate": {
+      "tiempo_crecimiento": 3,
+      "precio_venta": 15.50,
+      "costo_semilla": 5.00,
+      "agua_necesaria": 2,
+      "temporada": "verano"
+    },
+    "maiz": {
+      "tiempo_crecimiento": 5,
+      "precio_venta": 25.00,
+      "costo_semilla": 8.00,
+      "agua_necesaria": 3,
+      "temporada": "verano"
+    },
+    "zanahoria": {
+      "tiempo_crecimiento": 4,
+      "precio_venta": 12.00,
+      "costo_semilla": 3.00,
+      "agua_necesaria": 2,
+      "temporada": "primavera"
+    },
+    "papa": {
+      "tiempo_crecimiento": 6,
+      "precio_venta": 18.00,
+      "costo_semilla": 6.00,
+      "agua_necesaria": 2,
+      "temporada": "otoño"
+    },
+    "trigo": {
+      "tiempo_crecimiento": 4,
+      "precio_venta": 10.00,
+      "costo_semilla": 2.00,
+      "agua_necesaria": 1,
+      "temporada": "primavera"
+    }
+  }
+}

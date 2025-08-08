@@ -328,5 +328,200 @@
       "text": "📝 Ejemplos:\n# Patrón: for i in range(0, 20, 3)\n# Con índices: for i, cultivo in enumerate(cultivos)\n# Intervalos: if i % intervalo == 0",
       "unlock_after_minutes": 20
     }
+  },
+  "issue_23": {
+    "titulo": "Diccionario de cultivos",
+    "hint_1": {
+      "text": "🤔 ¿Cómo almacenas información estructurada sobre múltiples cultivos? Piensa en una base de datos simple.",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Los diccionarios pueden contener otros diccionarios. Estructura: CULTIVOS_DB = {'tomate': {'precio': 25, 'tiempo': 4}}",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Para cada cultivo incluye: precio, tiempo_crecimiento, temporadas, agua_requerida, experiencia, categoria, descripcion, nivel_requerido",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_24": {
+    "titulo": "Algoritmo de mejor cultivo",
+    "hint_1": {
+      "text": "🤔 ¿Qué hace a un cultivo 'mejor'? Rentabilidad, rapidez, experiencia... ¿Cómo calculas cada criterio?",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Rentabilidad = precio/tiempo. Para criterio equilibrado, combina varios factores con pesos diferentes.",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Función estructura: def encontrar_mejor_cultivo(criterio, temporada):\n# Filtrar por temporada\n# Calcular score según criterio\n# Retornar el de mayor score",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_25": {
+    "titulo": "Sistema de batalla de cultivos",
+    "hint_1": {
+      "text": "🤔 ¿Qué estadísticas necesita un cultivo para 'batallar'? Ataque, defensa, salud, velocidad...",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Batalla por turnos: orden por velocidad, daño = max(1, ataque - defensa), habilidades especiales por tipo.",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Clase BatallaCultivos necesita: inicializar cultivos, bucle de batalla, aplicar daño, verificar ganador, log de acciones.",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_26": {
+    "titulo": "Comprensión de listas",
+    "hint_1": {
+      "text": "🤔 [expresion for item in lista if condicion] - ¿Cómo puedes filtrar y transformar listas en una sola línea?",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Para cultivos listos: [c for c in cultivos if c.esta_listo()]. Para nombres: [c.nombre for c in cultivos]",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Anidadas: [[c1 for c1 in cultivos if c1.categoria == c2.categoria] for c2 in cultivos]. Con dict: {c.nombre: c.precio for c in cultivos}",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_27": {
+    "titulo": "Diccionarios anidados",
+    "hint_1": {
+      "text": "🤔 ¿Cómo organizas información jerárquica? configuracion -> recursos -> agua -> actual = 100",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Acceso profundo: datos['regiones']['norte']['clima']. Para navegar dinámicamente, divide la ruta por puntos.",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Función obtener_valor_anidado: divide ruta, usa bucle for para navegar nivel por nivel, maneja KeyError con default.",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_28": {
+    "titulo": "Algoritmo de búsqueda",
+    "hint_1": {
+      "text": "🤔 Búsqueda lineal O(n) vs binaria O(log n). ¿Cuándo usar cada una? ¿Qué requisitos tiene búsqueda binaria?",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Búsqueda binaria requiere lista ordenada. BFS usa queue para vecinos, DFS usa stack. Pathfinding considera obstáculos.",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Binaria: izq=0, der=len-1, medio=(izq+der)//2, compara y ajusta límites. BFS: queue=[inicio], while queue: pos=pop(0)",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_29": {
+    "titulo": "Ordenamiento personalizado",
+    "hint_1": {
+      "text": "🤔 Bubble O(n²), Quick O(n log n), Merge O(n log n). ¿Cuál es más estable? ¿Cuál usa menos memoria?",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Merge sort es estable y divide en mitades. Quick sort pivote y partición. Para múltiples criterios: sort(key=lambda x: (criterio1, criterio2))",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Merge: if len<=1 return, divide en mitades, merge recursivo. Quick: pivote, particionar, recursivo en sublistas.",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_30": {
+    "titulo": "Cálculo de estadísticas",
+    "hint_1": {
+      "text": "🤔 Media = sum/n, mediana = valor medio, desviación = sqrt(sum((x-media)²)/n). ¿Cómo calculas correlación?",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 ROI = (ganancia-inversión)/inversión*100. Correlación Pearson: cov(x,y)/(std(x)*std(y)). Tendencia = pendiente de regresión lineal.",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Para tendencia: suma de (x*y) vs suma(x)*suma(y). Para insights: compara valores con promedios, detecta anomalías, sugiere acciones.",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_31": {
+    "titulo": "Parser de datos CSV",
+    "hint_1": {
+      "text": "🤔 ¿Cómo lees archivos CSV en Python? El módulo 'csv' tiene funciones útiles como csv.reader() y csv.DictReader().",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 csv.DictReader() convierte cada fila en diccionario usando encabezados. Para fechas usa datetime.strptime(). Maneja errores con try/except.",
+      "unlock_after_minutes": 15
+    },
+    "hint_3": {
+      "text": "📝 Estructura básica:\nwith open(archivo, 'r') as f:\n    reader = csv.DictReader(f)\n    for row in reader:\n        fecha = datetime.strptime(row['fecha'], '%Y-%m-%d')\n        precio = float(row['precio'])",
+      "unlock_after_minutes": 30
+    }
+  },
+  "issue_32": {
+    "titulo": "Clases y POO - Crear clase Farmer",
+    "hint_1": {
+      "text": "🤔 Una clase es como un molde para crear objetos. ¿Qué atributos necesita un granjero? ¿Qué métodos puede hacer?",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Usa __init__ para constructor, @property para getters/setters, super() para herencia. Los atributos privados empiezan con _.",
+      "unlock_after_minutes": 15
+    },
+    "hint_3": {
+      "text": "📝 Estructura de clase:\nclass Farmer:\n    def __init__(self, name, experience=0):\n        self._name = name\n        self._experience = experience\n    \n    @property\n    def level(self):\n        return self._experience // 100",
+      "unlock_after_minutes": 30
+    }
+  },
+  "issue_33": {
+    "titulo": "Manejo de excepciones",
+    "hint_1": {
+      "text": "🤔 ¿Qué puede salir mal en una granja? Falta de recursos, mal clima, errores de archivo... Cada error necesita manejo específico.",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Crea excepciones personalizadas heredando de Exception. Usa try/except/finally. El bloque finally siempre se ejecuta.",
+      "unlock_after_minutes": 15
+    },
+    "hint_3": {
+      "text": "📝 Excepción personalizada:\nclass InsufficientResourcesError(Exception):\n    def __init__(self, resource, needed, available):\n        super().__init__(f'Falta {resource}: necesitas {needed}, tienes {available}')",
+      "unlock_after_minutes": 30
+    }
+  },
+  "issue_34": {
+    "titulo": "Decoradores y funciones avanzadas",
+    "hint_1": {
+      "text": "🤔 Los decoradores 'envuelven' funciones para añadir funcionalidad. ¿Cómo medirías tiempo o validarías permisos automáticamente?",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Un decorador básico: def mi_decorador(func): def wrapper(*args, **kwargs): return func(*args, **kwargs); return wrapper. Usa @functools.wraps(func).",
+      "unlock_after_minutes": 15
+    },
+    "hint_3": {
+      "text": "📝 Decorador con parámetros:\ndef timing(func):\n    @functools.wraps(func)\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__}: {time.time() - start:.2f}s')\n        return result\n    return wrapper",
+      "unlock_after_minutes": 30
+    }
+  },
+  "issue_35": {
+    "titulo": "Sistema de persistencia con JSON",
+    "hint_1": {
+      "text": "🤔 JSON puede almacenar diccionarios, listas, strings, números, booleanos. ¿Cómo guardas objetos complejos como fechas o clases personalizadas?",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Usa json.dumps() para serializar, json.loads() para deserializar. Para objetos complejos, crea un JSONEncoder personalizado.",
+      "unlock_after_minutes": 15
+    },
+    "hint_3": {
+      "text": "📝 Encoder personalizado:\nclass FarmJSONEncoder(json.JSONEncoder):\n    def default(self, obj):\n        if isinstance(obj, datetime):\n            return obj.isoformat()\n        if hasattr(obj, '__dict__'):\n            return obj.__dict__\n        return super().default(obj)",
+      "unlock_after_minutes": 30
+    }
   }
 }

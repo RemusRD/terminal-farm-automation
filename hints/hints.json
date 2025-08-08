@@ -74,6 +74,51 @@
       "unlock_after_minutes": 20
     }
   },
+  "issue_6": {
+    "titulo": "Formateo de strings",
+    "hint_1": {
+      "text": "🤔 ¿Cómo puedes incluir variables dentro de strings de forma dinámica?",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Los f-strings son la forma moderna: f'Hola {nombre}'. También puedes usar .format() o %.",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Ejemplo completo:\nf'🌾 GRANJA: {granja.nombre}'\nf'💧 AGUA: {granja.nivel_agua}/100'\nf'⚡ ENERGÍA: {granja.energia}%'",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_7": {
+    "titulo": "Operaciones aritméticas básicas",
+    "hint_1": {
+      "text": "🤔 ¿Cuáles son las operaciones matemáticas básicas? +, -, *, /, %, //...",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Para porcentajes: (parte/total) * 100. Para actualizar: variable += valor o variable -= valor.",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Ejemplos:\ncosto = cantidad * precio_unitario\neficiencia = (cosechados / plantados) * 100\ngranja.agua -= agua_usada",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_8": {
+    "titulo": "Comentarios y documentación",
+    "hint_1": {
+      "text": "🤔 ¿Cómo puedes explicar tu código para que otros (y tú mismo) lo entiendan?",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Usa # para comentarios de línea y \"\"\" \"\"\" para docstrings de funciones. Explica QUÉ hace, no cómo.",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Estructura de docstring:\ndef funcion(param):\n    \"\"\"\n    Descripción de qué hace.\n    Args: param (tipo): descripción\n    Returns: tipo: descripción\n    \"\"\"",
+      "unlock_after_minutes": 20
+    }
+  },
   "issue_9": {
     "titulo": "Sistema de riego con condicionales",
     "hint_1": {
@@ -134,6 +179,66 @@
       "unlock_after_minutes": 20
     }
   },
+  "issue_12": {
+    "titulo": "Validación de entrada con if/else",
+    "hint_1": {
+      "text": "🤔 ¿Cómo verificas si un número es válido antes de usarlo? ¿Y si la entrada no es un número?",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Usa try/except para números inválidos e if para verificar rangos. Ejemplo: if cantidad <= 0:",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Estructura de validación:\ntry:\n    num = int(input('Número: '))\n    if num > 0:\n        return num\n    else:\n        print('Debe ser positivo')\nexcept ValueError:\n    print('Debe ser un número')",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_13": {
+    "titulo": "Sistema de temporadas",
+    "hint_1": {
+      "text": "🤔 ¿Cómo puedes verificar si un cultivo es apropiado para una temporada específica?",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Cada cultivo puede tener una lista de temporadas válidas. Usa 'in' para verificar: if temporada in cultivo.temporadas",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Implementación:\nif cultivo.temporadas == 'todo-temporada':\n    return True\nelif self.temporada in cultivo.temporadas:\n    return True\nelse:\n    return False",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_14": {
+    "titulo": "Comparación de cultivos",
+    "hint_1": {
+      "text": "🤔 ¿Cómo comparas dos números? ¿Cómo calculas rentabilidad precio/tiempo?",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Usa operadores >, <, >= para comparar. Rentabilidad = precio / tiempo_crecimiento",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Función de comparación:\ndef comparar_por_rentabilidad(cultivo1, cultivo2):\n    rent1 = cultivo1.precio / cultivo1.tiempo_crecimiento\n    rent2 = cultivo2.precio / cultivo2.tiempo_crecimiento\n    return cultivo1 if rent1 > rent2 else cultivo2",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_15": {
+    "titulo": "Estado del juego con booleanos",
+    "hint_1": {
+      "text": "🤔 ¿Cómo representas estados de verdadero/falso? ¿Cómo combinas múltiples condiciones?",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Usa variables booleanas: es_dia = True. Combina con 'and': if es_dia and not hay_tormenta:",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Verificación de estado:\ndef puede_plantar(self):\n    if not self.es_dia:\n        return False, 'Solo puedes plantar de día'\n    if self.hay_tormenta:\n        return False, 'No puedes plantar durante tormenta'\n    return True, 'OK'",
+      "unlock_after_minutes": 20
+    }
+  },
   "issue_17": {
     "titulo": "Game loop con while",
     "hint_1": {
@@ -146,6 +251,81 @@
     },
     "hint_3": {
       "text": "📝 Estructura:\njugando = True\nwhile jugando:\n    mostrar_menu()\n    opcion = input('Elige: ')\n    if opcion == '0':\n        jugando = False",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_18": {
+    "titulo": "Función plantar_cultivo",
+    "hint_1": {
+      "text": "🤔 Una función necesita recibir parámetros y hacer algo con ellos. ¿Qué necesitas para plantar?",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 La función debe recibir tipo_cultivo y posicion. Verifica recursos antes de plantar.",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Estructura:\ndef plantar_cultivo(self, tipo_cultivo, posicion):\n    if self.energia < 10:\n        return False\n    # crear cultivo\n    self.cultivos.append(cultivo)\n    return True",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_19": {
+    "titulo": "Función pasar_dia",
+    "hint_1": {
+      "text": "🤔 ¿Qué cosas pasan automáticamente cada día en una granja? Piensa en un ciclo diario.",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Incrementa self.dia, resetea energia, actualiza cada cultivo con un bucle for.",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Pasos:\nself.dia += 1\nself.energia = 100\nfor cultivo in self.cultivos:\n    cultivo.crecer_un_dia()\n# crear y retornar resumen",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_20": {
+    "titulo": "Bucles anidados para regar zona",
+    "hint_1": {
+      "text": "🤔 Para regar un área rectangular, necesitas ir fila por fila y columna por columna. ¿Cómo?",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Un bucle for dentro de otro: el exterior para filas (y), el interior para columnas (x).",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Estructura:\nfor y in range(y_inicio, y_fin + 1):\n    for x in range(x_inicio, x_fin + 1):\n        cultivo = self.get_cultivo_en(x, y)\n        if cultivo: cultivo.regar()",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_21": {
+    "titulo": "Función con parámetros y retorno",
+    "hint_1": {
+      "text": "🤔 ¿Cómo calculas rentabilidad? (ganancia - costo) / tiempo. ¿Qué parámetros necesitas?",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 La función necesita precio, tiempo_crecimiento, costo_mantenimiento=1.0. Retorna un diccionario.",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Estructura:\ndef calcular_rentabilidad(precio, tiempo, costo=1.0):\n    ganancia_neta = precio - (costo * tiempo)\n    return {'ganancia_diaria': ganancia_neta/tiempo, 'clasificacion': '...'} ",
+      "unlock_after_minutes": 20
+    }
+  },
+  "issue_22": {
+    "titulo": "Range y enumerate en bucles",
+    "hint_1": {
+      "text": "🤔 range(start, stop, step) genera números. enumerate(lista) da índice y valor. ¿Cuándo usar cada uno?",
+      "unlock_after_minutes": 0
+    },
+    "hint_2": {
+      "text": "💡 Usa range() para secuencias numéricas y patrones. Usa enumerate() cuando necesitas la posición en la lista.",
+      "unlock_after_minutes": 10
+    },
+    "hint_3": {
+      "text": "📝 Ejemplos:\n# Patrón: for i in range(0, 20, 3)\n# Con índices: for i, cultivo in enumerate(cultivos)\n# Intervalos: if i % intervalo == 0",
       "unlock_after_minutes": 20
     }
   }
